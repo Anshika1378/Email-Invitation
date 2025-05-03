@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>VBDA 2025 AI-Powered Email Invitation</h1>
+
+    <label for="csvInput">Upload Recipits CSV</label>
+    <input type="file" id="csvInput" accept=".csv" />
+
+    <label for="emailTemplate">Email Template(use placeholder like {firstName},{Achievment})</label>
+    <textarea  id="emailTemplate" spellcheck="false">
+        Dear {FirstName},
+        
+        We are excited to invite you to the Viksit Bharat Dialogues & Awards (VBDA) 2025 event on 25th july 2025 at Bharat
+        Mandapam, New Delhi .
+
+        {AIHook}
+
+        Your contributions as a {Role} at {Organization} are truly inspiring.
+
+        Please RSVP at your earlist convenience.
+
+        Best Regards,
+        Bharat Economics Forum (BEF)
+    </textarea>
+    <button id="previewBtn">Preview Personalized Emails</button>
+    <button id="sendBtn" disabled>Send Emails (Simulated)</button>
+
+    <div id="previewContainer" aria-live="polite"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
